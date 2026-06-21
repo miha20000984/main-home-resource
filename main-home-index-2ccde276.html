@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 资料梳理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 3rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 开场短句 */
+        .opening {
+            margin-top: 2.4rem;
+            font-size: 1.8rem;
+            font-weight: 320;
+            letter-spacing: -0.01em;
+            color: #2c2c2c;
+            line-height: 1.3;
+            border-left: 3px solid #b8a79a;
+            padding-left: 1.2rem;
+        }
+
+        .opening small {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6b5f56;
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 承接段落 */
+        .intro-block {
+            margin-top: 2.8rem;
+            font-size: 1.05rem;
+            color: #3a3632;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.4rem;
+        }
+
+        .intro-block a {
+            color: #3d5a5c;
+            text-decoration: none;
+            border-bottom: 1px solid #cdc3ba;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .intro-block a:hover {
+            border-bottom-color: #3d5a5c;
+            color: #1f3a3c;
+        }
+
+        /* 特点列表 — 温和卡片式 */
+        .feature-list {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02), 0 0 0 1px #f0ece8;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04), 0 0 0 1px #dbd3cc;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            color: #2f2b27;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-item p {
+            font-size: 0.97rem;
+            color: #544d47;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .feature-item .tag {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-size: 0.75rem;
+            color: #8a7e74;
+            background: #f3efeb;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            letter-spacing: 0.02em;
+        }
+
+        /* 温和结尾 */
+        .gentle-close {
+            margin-top: 3.8rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e3ddd6;
+            font-size: 0.98rem;
+            color: #5f554c;
+        }
+
+        .gentle-close p {
+            margin-bottom: 1rem;
+        }
+
+        .gentle-close .signature {
+            font-style: normal;
+            display: block;
+            margin-top: 1.8rem;
+            color: #8f8277;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 1rem 2.5rem;
+            }
+
+            .opening {
+                font-size: 1.5rem;
+                padding-left: 1rem;
+            }
+
+            .feature-item {
+                padding: 1.3rem 1.2rem;
+            }
+        }
+
+        /* 极简装饰 */
+        .soft-divider {
+            width: 2rem;
+            height: 2px;
+            background: #d6cec4;
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        .quiet-quote {
+            font-style: normal;
+            background: #f5f2ee;
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            color: #4b423b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        整理，是为了更清晰地看见。
+        <small>从零散到有序，从索引到理解</small>
+    </div>
+
+    <!-- 承接段落：资料整理与信息索引的视角 -->
+    <div class="intro-block">
+        <p>
+            信息如潮，真正需要的往往不是更多，而是更恰当的关联。 
+            许多时候，我们面对的是一堆未命名的文件夹、零碎的笔记、散落的链接—— 
+            它们各自孤立，缺乏一个安静的聚合点。
+        </p>
+        <p>
+            这就是为何有人开始搭建属于自己的信息索引。不是大而全的门户， 
+            而是一处能按主题归类、随时回溯的“知识锚点”。 
+            从收藏夹到结构化条目，从个人备忘到可分享的参考页， 
+            每个细节都在回答同一个问题：哪些内容值得被反复遇见。
+        </p>
+        <p>
+            在这个脉络下，<a href="https://main-home-kai-yun.com">开云</a> 
+            被设计为一种信息整理实验：不追求包罗万象，而是围绕特定领域 
+            提供克制的条目、分类的入口以及干净的回访路径。
+        </p>
+    </div>
+
+    <!-- 特点列表：从索引视角归纳 -->
+    <div class="feature-list">
+        <div class="feature-item">
+            <h3>条目式索引</h3>
+            <p>
+                每个主题对应简明的描述与关联链接，摒弃冗余装饰， 
+                让信息本身成为主角。适合快速扫描与定点查阅。
+            </p>
+            <span class="tag">结构化</span>
+        </div>
+        <div class="feature-item">
+            <h3>温和的导航</h3>
+            <p>
+                页面布局以阅读流为导向，层级清晰但不生硬。 
+                从总览到细分，节奏平缓，避免跳转带来的断裂感。
+            </p>
+            <span class="tag">低干扰</span>
+        </div>
+        <div class="feature-item">
+            <h3>可生长的框架</h3>
+            <p>
+                索引的本质是动态的。随着资料积累，分类可以扩展、条目可以修订， 
+                页面保持一种“未完成”的开放状态，鼓励持续梳理。
+            </p>
+            <span class="tag">迭代友好</span>
+        </div>
+    </div>
+
+    <!-- 一点场景提示 / FAQ 摘要风格 -->
+    <div style="margin-top: 2.6rem; background: #f8f5f2; border-radius: 18px; padding: 1.4rem 1.6rem;">
+        <p style="font-size: 0.95rem; color: #4f473f;">
+            <span style="font-weight: 450;">常见思路：</span> 
+            有人用它做个人知识库的起点，也有人将其作为团队内部参考的轻量首页。 
+            关键在于，索引本身不替代深度内容，而是提供一条 <span class="quiet-quote">温和的路径</span> 
+            让访客决定下一步往哪里走。
+        </p>
+        <p style="font-size: 0.9rem; color: #6e6258; margin-top: 0.8rem;">
+            ❓ 如果某个分类下暂时只有一两个条目，空着还是保留占位？ 
+            —— 我们倾向保留占位，暗示“这块内容值得被填充”，比删除更诚实。
+        </p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-close">
+        <p>
+            索引不是终点，是对话的开始。当你翻开一个条目， 
+            实际上是在与过去的整理者（可能是未来的自己）交换视角。 
+            开云所做的，就是提供这样一个安静、克制的交换场所。
+        </p>
+        <p>
+            如果你也在尝试搭建自己的信息索引，或许可以从一个简单的页面开始， 
+            把最常回看的内容放在一起，定期修剪、补充、重新排列。
+        </p>
+        <span class="signature">—— 一次索引，一次梳理</span>
+    </div>
+
+    <!-- 底部细小链接（再次出现但自然嵌在句子中，不破坏结尾氛围） -->
+    <div style="margin-top: 2rem; font-size: 0.85rem; color: #9a8f85; text-align: left; border-top: 1px solid #ece6df; padding-top: 1.2rem;">
+        <p style="margin: 0;">
+            本页所提及的索引实验，其在线版本位于 
+            <a href="https://main-home-kai-yun.com" style="color: #7b6e63; text-decoration: none; border-bottom: 1px solid #d1c7bd;">开云</a>， 
+            欢迎任何基于整理与探索的善意使用。
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

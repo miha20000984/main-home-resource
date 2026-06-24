@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常查询与延伸阅读 · 爱游戏笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f8fb;
+      color: #1e2f3d;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* 网格背景点缀 */
+    .grid-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 60, 70, 0.06);
+      padding: 2rem 1.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(0, 150, 140, 0.08);
+      transition: box-shadow 0.2s;
+    }
+    .grid-card:hover {
+      box-shadow: 0 8px 28px rgba(32, 130, 120, 0.10);
+    }
+
+    /* 蓝绿点缀色 */
+    .accent {
+      color: #1f7a72;
+    }
+    .accent-border {
+      border-left: 4px solid #2b948a;
+      padding-left: 1.25rem;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      color: #10343a;
+    }
+    .subhead {
+      font-size: 1.1rem;
+      color: #3f6368;
+      margin-bottom: 1.8rem;
+      font-weight: 380;
+      border-bottom: 1px solid #c1dbd8;
+      padding-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2rem 0 1rem 0;
+      color: #12444a;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 480;
+      margin: 1.6rem 0 0.5rem 0;
+      color: #1f6360;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      background: #e7f3f1;
+      padding: 1.25rem 1.5rem;
+      border-radius: 1.5rem;
+      color: #194d4a;
+      border-left: 5px solid #2b948a;
+    }
+
+    .quote-tip {
+      background: #f3fbfa;
+      border-radius: 1.25rem;
+      padding: 1.3rem 1.8rem;
+      margin: 2rem 0;
+      border: 1px solid #b5d5d0;
+      color: #1a4a4a;
+      font-style: normal;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .quote-tip::before {
+      content: "📌 延伸提示";
+      display: block;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      color: #2a7a72;
+      margin-bottom: 0.3rem;
+    }
+
+    .visit-sentence {
+      background: #ddeeeb;
+      padding: 1.2rem 1.8rem;
+      border-radius: 2rem;
+      margin: 2.5rem 0 1rem 0;
+      font-size: 1.12rem;
+      text-align: center;
+      border: 1px solid #94c2bb;
+      color: #0e3f3c;
+    }
+    .visit-sentence a {
+      color: #0b5e59;
+      text-decoration: none;
+      font-weight: 520;
+      border-bottom: 1.5px dashed #2f8f86;
+      transition: border-color 0.3s;
+    }
+    .visit-sentence a:hover {
+      border-bottom: 1.5px solid #1e7f77;
+    }
+
+    .faq-mini {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0 1.2rem;
+    }
+    .faq-item {
+      background: #fafcfb;
+      border-radius: 1.2rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid #cee1dd;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      color: #1a625d;
+      margin-bottom: 0.25rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #cfe3df;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #4b6d6a;
+      margin-top: 3rem;
+      border-top: 1px solid #c3dbd6;
+      padding-top: 1.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* 响应式 */
+    @media (min-width: 600px) {
+      body { padding: 2rem 2.5rem 4rem; }
+      .grid-card { padding: 2.5rem 2.8rem; }
+      .faq-mini { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .grid-card { padding: 1.6rem 1.2rem; }
+      .intro { padding: 1rem 1.2rem; }
+      .quote-tip { padding: 1rem 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>日常查询·对照·阅读笔记</h1>
+    <div class="subhead">从几次搜索与随手翻页开始，慢慢梳理一些关于平台与内容的片段</div>
+  </header>
+
+  <!-- 导语 / 背景 -->
+  <div class="grid-card">
+    <p class="intro">
+      偶尔会想：同样一个名字，在不同语境里究竟指什么？<br>
+      起初只是随手查一个游戏社区，后来翻到几篇对比、几段讨论，逐渐拼出一张更完整的图景。
+    </p>
+    <p>
+      这篇短文没有总结的野心，更像是一段记录的集合——从几个问题出发，把找到的线索按自己的方式排列。如果你也恰好对这类话题感兴趣，或许可以当作一次平行的翻阅。
+    </p>
+  </div>
+
+  <!-- 正文 多段落 + 卡片式内容 -->
+  <div class="grid-card">
+    <h2>1. 搜索框里的对照</h2>
+    <p>
+      搜索可能是最频繁的动作了。输入一个关键词，翻几页结果，点开三四条链接，然后关闭标签页——整个过程不到三分钟。但有时候，某一条结果会留在收藏夹里，隔几天又点开一次。比如以“<a href="https://line-vip-igame.com" style="color:#166b65; text-decoration: underline; text-underline-offset: 3px;">爱游戏</a>”为线索的那次查找，我记得先后打开了五个页面，其中两个已经打不开了，剩下的三个却提供了彼此补充的信息。
+    </p>
+    <p>
+      有趣的是，同样的名字在不同文章里侧重点完全不同。有的更关注界面与分类方式，有的列出了具体的活动时间线，还有一篇干脆是个人体验的随笔。把它们放在一起读，反而比单独看任何一篇都更接近全貌。
+    </p>
+
+    <h3>对照的几个方向</h3>
+    <p>
+      我习惯把找到的信息按「功能描述」「更新频率」「用户习惯」三个维度简单归档。这个方法并不严谨，但足够帮自己理清脉络。比如关于某个平台的活动规律，两篇文章都提到了月底安排，但具体形式和参与入口说的不是同一套——这就需要再回去确认原始页面。
+    </p>
+  </div>
+
+  <div class="grid-card">
+    <h2>2. 延伸阅读：从单页到周边</h2>
+    <p>
+      只盯着一个页面看，容易陷入信息茧房。延伸阅读的意思是：顺着链接点出去，看看引用来源、相关推荐、或者同一作者的其他文章。这不是什么高效方法，但常常带来意外收获。
+    </p>
+    <p>
+      有一回，我在一篇介绍里读到关于“用户界面迭代”的几句话，觉得有意思，就顺着文末的出处找到了一个讨论帖。帖子里有人贴了旧版截图，下面跟了十几层楼的对比——那种氛围很松散，却比正式文档更生动。后来我把那个帖子也存了下来，当作背景素材。
+    </p>
+    <div class="quote-tip">
+      很多时候，延伸阅读的价值不在于找到“正确答案”，而在于看见不同的人如何描述同一件事。这种差异本身就是信息。
+    </div>
+  </div>
+
+  <div class="grid-card">
+    <h2>3. 使用场景：查询、对比、随手记</h2>
+    <p>
+      如果把“查询—对照—延伸”看作一个循环，那么最常用的场景可能是下面几种：
+    </p>
+    <ul style="margin-left: 1.5rem; padding-left: 0.5rem; list-style: square; color: #16625e;">
+      <li><strong>快速定位</strong> —— 比如确认某个功能是否还在、某条规则有没有更新。</li>
+      <li><strong>并排比较</strong> —— 同时打开两三个页面，把关键段落摘出来放在一起。</li>
+      <li><strong>碎片记录</strong> —— 看到有意思的表述，随手复制一两句，加个标签。</li>
+    </ul>
+    <p style="margin-top: 1.2rem;">
+      这些动作都不复杂，但积累下来，会慢慢形成属于自己的参照系。下次再遇到类似问题，就不必每次都从头翻起了。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 紧凑卡片网格 -->
+  <div class="grid-card">
+    <h2>几个常见问题 · 快速索引</h2>
+    <div class="faq-mini">
+      <div class="faq-item">
+        <strong>关于内容查找</strong>
+        <span style="font-size:0.95rem;">通常首页会展示最新板块，分类栏也保留了历史归档。如果不确定从哪里开始，可以先看“热门”或“更新”标签。</span>
+      </div>
+      <div class="faq-item">
+        <strong>账号与使用</strong>
+        <span style="font-size:0.95rem;">大部分功能不需要注册即可浏览，个别互动模块可能需要简单登录。具体规则以页面提示为准。</span>
+      </div>
+      <div class="faq-item">
+        <strong>移动端适配</strong>
+        <span style="font-size:0.95rem;">目前多数页面在手机上做了响应式调整，横屏或竖屏都可以正常阅读和导航。</span>
+      </div>
+      <div class="faq-item">
+        <strong>信息时效</strong>
+        <span style="font-size:0.95rem;">活动或公告类内容会标注日期，普通介绍页更新频率不定。建议以实际页面显示为准。</span>
+      </div>
+    </div>
+    <p style="font-size: 0.95rem; margin-top: 1rem; color: #366b65;">
+      * 以上回答基于常见经验，更准确的信息请直接参考对应页面的最新内容。
+    </p>
+  </div>
+
+  <!-- 访问句 自然嵌入链接 -->
+  <div class="visit-sentence">
+    如果你也想从日常查询开始，慢慢搭建自己的参考笔记，可以随时打开
+    <a href="https://line-vip-igame.com">爱游戏</a>
+    的首页看看——不需要特定目的，先逛一逛、翻一翻，也许就有新的发现。
+  </div>
+
+  <!-- 收尾 -->
+  <div style="margin: 1.8rem 0 0.5rem;">
+    <p style="color: #376b65;">
+      当然，所有记录和延伸都是个人的。同一个页面，不同人读到的重点可能完全不同。这没什么不好——恰好说明信息本身是活的。
+    </p>
+    <p style="margin-top: 0.8rem; color: #3d6b65;">
+      如果某天你又搜到同一个名字，不妨多留几分钟，看看有没有之前漏掉的角落。
+    </p>
+  </div>
+
+  <div class="footer-note">
+    —— 基于日常查询与延伸阅读 · 2025 ——
+  </div>
+
+</div>
+</body>
+</html>

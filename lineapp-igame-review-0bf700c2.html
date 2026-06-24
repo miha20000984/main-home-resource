@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 – 发现好游戏从这里开始</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e2128;
+      background: #f9fafb;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #0d47a1;
+    }
+    /* Hero 深色区 */
+    .hero {
+      background: linear-gradient(145deg, #0b1a2a 0%, #142b3c 100%);
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #e3edf5;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      color: #bfd6e6;
+    }
+    .hero .tagline {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #cbddee;
+    }
+    /* 主内容容器 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* 优势区 (浅色背景) */
+    .advantages {
+      padding: 3.5rem 0 2.5rem;
+    }
+    .advantages h2 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 1.8rem;
+      border-left: 6px solid #1565c0;
+      padding-left: 1rem;
+      color: #0f1b28;
+    }
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 1.8rem;
+    }
+    .advantage-card {
+      background: white;
+      padding: 1.8rem 1.6rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .advantage-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .advantage-card h3 {
+      font-size: 1.3rem;
+      font-weight: 510;
+      margin-bottom: 0.5rem;
+      color: #0e1d2f;
+    }
+    .advantage-card p {
+      color: #374151;
+      font-size: 1rem;
+    }
+    /* 说明区 —— 场景 / 用途 切入 */
+    .scenario {
+      padding: 2rem 0 3.5rem;
+      background: #ffffff;
+      border-radius: 40px 40px 0 0;
+      margin-top: -0.5rem;
+    }
+    .scenario h2 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      border-left: 6px solid #1565c0;
+      padding-left: 1rem;
+      color: #0f1b28;
+    }
+    .scenario-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .scenario-item {
+      flex: 1 1 200px;
+      background: #f0f4f9;
+      padding: 1.6rem 1.4rem;
+      border-radius: 28px;
+      border: 1px solid #e2e9f0;
+    }
+    .scenario-item .emoji-bg {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .scenario-item p {
+      font-size: 0.95rem;
+      color: #2d3a44;
+    }
+    /* FAQ 摘要 */
+    .faq-summary {
+      padding: 2.5rem 0 1.8rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      border-left: 6px solid #1565c0;
+      padding-left: 1rem;
+      color: #0f1b28;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 24px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 0.9rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e8edf3;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      margin-bottom: 0.25rem;
+      color: #0f1d2e;
+    }
+    .faq-item p {
+      color: #2d3b4a;
+      font-size: 0.95rem;
+    }
+    /* 底部链接区域 */
+    .footer-links {
+      padding: 2.5rem 0 3.5rem;
+      border-top: 1px solid #dee6ef;
+      margin-top: 0.5rem;
+    }
+    .footer-links p {
+      color: #3b4a5a;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+    .footer-links a {
+      font-weight: 500;
+    }
+    .footer-meta {
+      font-size: 0.9rem;
+      color: #5f6f7e;
+      margin-top: 1.2rem;
+    }
+    /* 小屏适配 */
+    @media (max-width: 680px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .advantage-grid { grid-template-columns: 1fr; }
+      .scenario-grid { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .container { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- hero 区 -->
+  <section class="hero">
+    <div class="container">
+      <div class="tagline">🎮 游戏爱好者·新发现</div>
+      <h1>从「爱游戏」开始你的下一段冒险</h1>
+      <p>不绕弯子，不堆列表——快速识别一个网站是否合你口味，是很多玩家的第一步。这里就是那种你打开后就想继续逛的地方。</p>
+    </div>
+  </section>
+
+  <!-- 优势区·为什么值得你注意 -->
+  <section class="advantages">
+    <div class="container">
+      <h2>为什么大家会提到它</h2>
+      <div class="advantage-grid">
+        <div class="advantage-card">
+          <h3>📌 一眼清楚定位</h3>
+          <p>很多游戏站进去一头雾水，但打开 <a href="https://lineapp-igame.com">爱游戏</a> 你立刻能判断出它是不是你要找的——分类直接，引导克制，没有杂乱弹窗。</p>
+        </div>
+        <div class="advantage-card">
+          <h3>🕹️ 内容偏向实用</h3>
+          <p>从热门手游到独立小作，信息和入口都摆得合理。对普通玩家来说，减少辨别成本就是最大的友好。</p>
+        </div>
+        <div class="advantage-card">
+          <h3>🗂️ 结构有呼吸感</h3>
+          <p>版块间距、字体粗细、卡片留白都经过设计，不是单纯的列表堆砌。读起来不累，找东西也快。</p>
+        </div>
+        <div class="advantage-card">
+          <h3>🔍 搜索直觉化</h3>
+          <p>无论你是想找某款具体游戏，还是随便翻翻新鲜内容，网站都保留了足够的探索空间，入口不深。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：从使用场景帮用户快速识别 -->
+  <section class="scenario">
+    <div class="container">
+      <h2>什么情况下你会用到它</h2>
+      <div class="scenario-grid">
+        <div class="scenario-item">
+          <span class="emoji-bg">📱</span>
+          <p><strong>换游戏荒时</strong><br>不知道最近玩什么，可以看看站内推荐和分类，比漫无目的刷商店更有效率。</p>
+        </div>
+        <div class="scenario-item">
+          <span class="emoji-bg">👥</span>
+          <p><strong>想跟朋友聊游戏</strong><br>分享一个靠谱链接就好，不用解释「那是什么站」。直接说<a href="https://lineapp-igame.com">爱游戏</a>就行。</p>
+        </div>
+        <div class="scenario-item">
+          <span class="emoji-bg">📂</span>
+          <p><strong>整理收藏夹</strong><br>如果你喜欢收藏好玩的站点，这个值得留一个位置，轻量、干净、持续在更新。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 · 快速回答基础疑问 -->
+  <section class="faq-summary">
+    <div class="container">
+      <h2>几个常见疑问</h2>
+      <div class="faq-item">
+        <strong>这个网站主要有什么内容？</strong>
+        <p>主要是游戏信息、入口、分类浏览以及一些社区向的整合。不搞虚假宣传，内容偏资讯+导航性质。</p>
+      </div>
+      <div class="faq-item">
+        <strong>需要注册才能看吗？</strong>
+        <p>大部分内容可以直接浏览，没有强制注册墙。部分互动功能可能需要账号，但阅读和查找不设限。</p>
+      </div>
+      <div class="faq-item">
+        <strong>和别的游戏站有什么不同？</strong>
+        <p>设计克制，没有铺天盖地的广告位，也没有诱导点击的按钮。给人的感觉比较清爽，像是一个真正喜欢游戏的人整理的页面。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部链接区域 -->
+  <footer class="footer-links">
+    <div class="container">
+      <p>如果你还没去过，可以直接试试 <a href="https://lineapp-igame.com">爱游戏</a> —— 打开后花一分钟扫一遍，就知道这里适不适合你。</p>
+      <p style="margin-top: 0.8rem;">站内内容不断更新，分类也持续优化。不管是资深玩家还是刚入门，都能找到自己感兴趣的部分。</p>
+      <div class="footer-meta">
+        <span>页面展示仅作介绍 · 实际内容以网站为准</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
